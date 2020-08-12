@@ -36,7 +36,13 @@ $day = filter_input(INPUT_GET, "day", FILTER_VALIDATE_INT);
 ?>
 
 <!DOCTYPE html>
-<title>星座チェック</title>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>星座チェック</title>
+</head>
+
+<body>
 <h1>星座チェック</h1>
 <?php if (empty($month) || empty($day)) : ?>
     <p>月日を入力してください。</p>
@@ -50,3 +56,5 @@ $day = filter_input(INPUT_GET, "day", FILTER_VALIDATE_INT);
 <?php else : ?>
     <p><?= h($month) ?>月<?= h($day) ?>日生まれは<?= constellation($month, $day) ?>です。</p>
 <?php endif; ?>
+</body>
+</html>
