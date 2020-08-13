@@ -47,9 +47,9 @@ $day = filter_input(INPUT_GET, "day", FILTER_VALIDATE_INT);
 <?php if (empty($month) || empty($day)) : ?>
     <p>月日を入力してください。</p>
     <form method="get">
-        <input name="month" type="number" min属性=1 max属性=12>
+        <input name="month" type="number" min=1 max=12>
         <label>月</label>
-        <input name="day" type="number" min属性=1 max属性=31>
+        <input name="day" type="number" min=1 max=31>
         <label>日</label>
         <input type="submit" value="OK">
     </form>
